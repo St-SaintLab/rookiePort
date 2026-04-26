@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;./kiboma&gt; Portfolio</title>
+    <meta
+      name="description"
+      content="A dark neon portfolio with interactive tabs, CV modal, skills cards, and particle background."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#professional" data-tab-link>
+          &lt;./kiboma&gt;
+          <span class="brand-dot">.</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link is-active" href="index.html" data-tab="professional">Professional</a>
+          <a class="nav-link" href="personal.html" data-tab="personal">Personal</a>
+          <a class="nav-link" href="contact.html" data-tab="contact">Contact</a>
+          <div class="language-select" data-select>
+            <button class="pill-button language-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="pill-ico" aria-hidden="true">🌐</span>
+              <span data-language-label>English</span>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="dropdown" role="listbox" aria-label="Language selector">
+              <button type="button" class="dropdown-item is-selected" data-language="English">English</button>
+              <button type="button" class="dropdown-item" data-language="Swahili">Swahili</button>
+              <button type="button" class="dropdown-item" data-language="Spanish">Spanish</button>
+              <button type="button" class="dropdown-item" data-language="Japanese">Japanese</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="hero" id="professional">
+          <div class="hero-copy">
+            <div class="name-wrap">
+              <h1 class="hero-title">Hello World!</h1>
+            </div>
+            <p class="eyebrov">I am <p class="name">MESHACK KIBOMA</p></p>
+            <p class="hero-summary" data-language-copy>
+              | Full-Stack Developer | Jr Software Engineer | Game Dev | Cryptographer |
+            </p>
+            <p class="eyebrow">
+              I bring a detail-oriented mindset and a strong passion for building purposeful digital solutions. With a
+              primary focus on backend development, I specialize in creating robust, efficient, and scalable systems
+              that turn ideas into reality. Alongside my software engineering journey, I also bring foundational game
+              development skills and a growing interest in designing interactive experiences that are both functional
+              and memorable.
+            </p>
+            <div class="hero-actions">
+              <div class="cv-select" data-select>
+                <button class="pill-button cv-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span>View CV</span>
+                  <span class="chevron">›</span>
+                </button>
+                <div class="dropdown cv-dropdown" role="listbox" aria-label="CV selector">
+                  <button type="button" class="dropdown-item is-selected" data-cv="English CV">English CV</button>
+                  <button type="button" class="dropdown-item" data-cv="Swahili CV">Swahili CV</button>
+                  <button type="button" class="dropdown-item" data-cv="Spanish CV">Spanish CV</button>
+                  <button type="button" class="dropdown-item" data-cv="Japanese CV">Japanese CV</button>
+                </div>
+              </div>
+              <div class="social-links" aria-label="Social links">
+                <a
+                  class="icon-button"
+                  href="https://www.linkedin.com/in/meshack-kiboma-aa88152a0/"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v2" />
+                    <path d="M2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                <a class="icon-button" href="https://github.com/St-SaintLab" aria-label="GitHub">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21"
+                    />
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- SKILLS PANEL (unchanged) -->
+          <aside class="skills-panel" aria-labelledby="skills-title">
+            <div class="skills-panel-inner">
+              <div class="skills-head">
+                <h3 id="skills-title">SKILLS</h3>
+              </div>
+              <div class="skills-grid">
+                <!-- Languages card -->
+                <article class="skill-card" data-skill-card>
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 6h14" />
+                        <path d="M7 12h10" />
+                        <path d="M9 18h6" />
+                      </svg>
+                    </span>
+                    <span class="skill-name">Languages</span>
+                  </div>
+                  <div class="skill-reveal">
+                    <div class="skill-list">
+                      <div class="skill-row" data-percent="92"><span class="skill-row-name">Python</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">92%</span></div></div>
+                      <div class="skill-row" data-percent="90"><span class="skill-row-name">HTML</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">90%</span></div></div>
+                      <div class="skill-row" data-percent="88"><span class="skill-row-name">CSS</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">88%</span></div></div>
+                      <div class="skill-row" data-percent="82"><span class="skill-row-name">C#</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">82%</span></div></div>
+                      <div class="skill-row" data-percent="79"><span class="skill-row-name">Rust</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">79%</span></div></div>
+                      <div class="skill-row" data-percent="86"><span class="skill-row-name">Java</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">86%</span></div></div>
+                      <div class="skill-row" data-percent="76"><span class="skill-row-name">C ++</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">76%</span></div></div>
+                      <div class="skill-row" data-percent="74"><span class="skill-row-name">Swift</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">74%</span></div></div>
+                      <div class="skill-row" data-percent="78"><span class="skill-row-name">Kotlin</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">78%</span></div></div>
+                      <div class="skill-row" data-percent="87"><span class="skill-row-name">TypeScript</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">87%</span></div></div>
+                    </div>
+                  </div>
+                  <button class="pill-button skill-view-btn" type="button" data-skill-view aria-label="View Languages skills">view</button>
+                </article>
+                <!-- Backend Frameworks card -->
+                <article class="skill-card" data-skill-card>
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 7h16v10H4z" />
+                        <path d="M8 7v10" />
+                        <path d="M12 7v10" />
+                        <path d="M16 7v10" />
+                      </svg>
+                    </span>
+                    <span class="skill-name">Backend Frameworks</span>
+                  </div>
+                  <div class="skill-reveal">
+                    <div class="skill-list">
+                      <div class="skill-row" data-percent="91"><span class="skill-row-name">Django(Python)</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">91%</span></div></div>
+                      <div class="skill-row" data-percent="89"><span class="skill-row-name">Laravel</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">89%</span></div></div>
+                      <div class="skill-row" data-percent="84"><span class="skill-row-name">Spring</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">84%</span></div></div>
+                      <div class="skill-row" data-percent="83"><span class="skill-row-name">Ruby on Rails</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">83%</span></div></div>
+                      <div class="skill-row" data-percent="87"><span class="skill-row-name">ASP.NET Core</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">87%</span></div></div>
+                      <div class="skill-row" data-percent="82"><span class="skill-row-name">Node.js / Express</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">82%</span></div></div>
+                      <div class="skill-row" data-percent="88"><span class="skill-row-name">Flask</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">88%</span></div></div>
+                    </div>
+                  </div>
+                  <button class="pill-button skill-view-btn" type="button" data-skill-view aria-label="View Backend Frameworks skills">view</button>
+                </article>
+                <!-- Frontend Frameworks card -->
+                <article class="skill-card" data-skill-card>
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16v16H4z" />
+                        <path d="M8 15l3-6 3 6" />
+                        <path d="M9 13h4" />
+                      </svg>
+                    </span>
+                    <span class="skill-name">Frontend Frameworks</span>
+                  </div>
+                  <div class="skill-reveal">
+                    <div class="skill-list">
+                      <div class="skill-row" data-percent="90"><span class="skill-row-name">React</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">90%</span></div></div>
+                      <div class="skill-row" data-percent="82"><span class="skill-row-name">Angular</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">82%</span></div></div>
+                      <div class="skill-row" data-percent="78"><span class="skill-row-name">Svelte</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">78%</span></div></div>
+                      <div class="skill-row" data-percent="86"><span class="skill-row-name">Next.js</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">86%</span></div></div>
+                      <div class="skill-row" data-percent="74"><span class="skill-row-name">Nuxt</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">74%</span></div></div>
+                      <div class="skill-row" data-percent="70"><span class="skill-row-name">Ember</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">70%</span></div></div>
+                    </div>
+                  </div>
+                  <button class="pill-button skill-view-btn" type="button" data-skill-view aria-label="View Frontend Frameworks skills">view</button>
+                </article>
+                <!-- Tools & Integration card -->
+                <article class="skill-card" data-skill-card>
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v4" />
+                        <path d="M12 18v4" />
+                        <path d="M4.9 4.9l2.8 2.8" />
+                        <path d="M16.3 16.3l2.8 2.8" />
+                        <path d="M2 12h4" />
+                        <path d="M18 12h4" />
+                        <path d="M4.9 19.1l2.8-2.8" />
+                        <path d="M16.3 7.7l2.8-2.8" />
+                        <circle cx="12" cy="12" r="3.5" />
+                      </svg>
+                    </span>
+                    <span class="skill-name">Tools &amp; Integration</span>
+                  </div>
+                  <div class="skill-reveal">
+                    <div class="skill-list">
+                      <div class="skill-row" data-percent="88"><span class="skill-row-name">Version control</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">88%</span></div></div>
+                      <div class="skill-row" data-percent="90"><span class="skill-row-name">Code editors / IDEs</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">90%</span></div></div>
+                      <div class="skill-row" data-percent="84"><span class="skill-row-name">Build and dependency tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">84%</span></div></div>
+                      <div class="skill-row" data-percent="79"><span class="skill-row-name">CI/CD tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">79%</span></div></div>
+                      <div class="skill-row" data-percent="81"><span class="skill-row-name">API integration tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">81%</span></div></div>
+                      <div class="skill-row" data-percent="76"><span class="skill-row-name">Container and deployment tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">76%</span></div></div>
+                      <div class="skill-row" data-percent="83"><span class="skill-row-name">Testing tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">83%</span></div></div>
+                      <div class="skill-row" data-percent="77"><span class="skill-row-name">Project management tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">77%</span></div></div>
+                      <div class="skill-row" data-percent="75"><span class="skill-row-name">Monitoring tools</span><div class="skill-row-track"><div class="skill-bar"><span class="skill-fill"></span></div><span class="skill-percent">75%</span></div></div>
+                    </div>
+                  </div>
+                  <button class="pill-button skill-view-btn" type="button" data-skill-view aria-label="View Tools and Integration skills">view</button>
+                </article>
+              </div>
+            </div>
+          </aside>
+          <!-- Skills modal backdrop (unchanged) -->
+          <div class="modal-backdrop skills-modal" id="skills-modal" aria-hidden="true">
+            <div class="modal-panel skills-modal-panel" role="dialog" aria-modal="true" aria-labelledby="skills-modal-title">
+              <div class="modal-head skills-modal-head">
+                <div class="skill-modal-title-wrap">
+                  <span class="skill-icon skill-modal-icon" data-skill-modal-icon aria-hidden="true"></span>
+                  <div>
+                    <p class="modal-kicker">Skill breakdown</p>
+                    <h3 id="skills-modal-title">Languages</h3>
+                  </div>
+                </div>
+                <button class="modal-close" type="button" data-skill-modal-close aria-label="Close skills popup">×</button>
+              </div>
+              <div class="skill-modal-body" data-skill-modal-body></div>
+            </div>
+          </div>
+        </section>
+        <!-- STATS ROW (unchanged) -->
+        <section class="stats-row" aria-label="Statistics">
+          <article class="stat-card" data-stat>
+            <strong>2</strong>
+            <span>Years of experience</span>
+          </article>
+          <article class="stat-card" data-stat>
+            <strong>19</strong>
+            <span>Projects worked on</span>
+          </article>
+          <article class="stat-card" data-stat>
+            <strong>10</strong>
+            <span>Backend Projects</span>
+          </article>
+          <article class="stat-card" data-stat>
+            <strong>9</strong>
+            <span>Frontend Projects</span>
+          </article>
+        </section>
+        <!-- ==================== NEW EDUCATION SECTION ==================== -->
+        <section class="content-section education-section" id="education">
+          <div class="section-card education-card">
+            <div class="education-header">
+              <span class="education-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <img src="https://cdn.imgtree.co/images/hRj4reM9.png" alt="Education Icon" />
+                </svg>
+              </span>
+              <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="education-grid">
+              <!-- Main degree card -->
+              <article class="degree-card">
+                <div class="degree-badge">Certified</div>
+                <h3 class="degree-title">Full-Stack Developer</h3>
+                <div class="degree-meta">
+                  <span class="degree-period">Sep 1, 2024 -- April 5, 2026</span>
+                  <div class="degree-score-wrap">
+                    <img src="assets/star-medal.svg" alt="" class="score-icon" />
+                    <span class="degree-score">Excellence</span>
+                  </div>
+                </div>
+                <p class="degree-institution">FreeCodeCamp (FCC)</p>
+                <div class="degree-decoration"></div>
+              </article>
+
+              <!-- Certificate cards row -->
+              <div class="certificates-row">
+                <!-- Python -->
+                <div class="cert-card" data-cert="Python" data-link="https://www.freecodecamp.org/certification/kiboma/python-v9">
+                  <div class="cert-image-wrapper">
+                    <img src="https://cdn.imgtree.co/images/DJfe34e7.png" alt="Python Certificate" loading="lazy" />
+                    <div class="cert-overlay">
+                      <button class="cert-fullscreen" type="button" aria-label="View full certificate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="cert-title">Python</span>
+                </div>
+
+                <!-- Foundational C# with Microsoft -->
+                <div class="cert-card" data-cert="C#" data-link="https://www.freecodecamp.org/certification/kiboma/foundational-c-sharp-with-microsoft">
+                  <div class="cert-image-wrapper">
+                    <img src="https://cdn.imgtree.co/images/kbEj3H60.png" alt="Foundational C# Certificate" loading="lazy" />
+                    <div class="cert-overlay">
+                      <button class="cert-fullscreen" type="button" aria-label="View full certificate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="cert-title">Foundational C# with Microsoft</span>
+                </div>
+
+                <!-- Relational Database -->
+                <div class="cert-card" data-cert="Database" data-link="https://www.freecodecamp.org/certification/kiboma/relational-databases-v9">
+                  <div class="cert-image-wrapper">
+                    <img src="https://cdn.imgtree.co/images/vyQzcm39.png" alt="Relational Database Certificate" loading="lazy" />
+                    <div class="cert-overlay">
+                      <button class="cert-fullscreen" type="button" aria-label="View full certificate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="cert-title">Relational Database</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="cert-card" data-cert="JavaScript" data-link="https://www.freecodecamp.org/certification/kiboma/javascript-v9">
+                  <div class="cert-image-wrapper">
+                    <img src="https://cdn.imgtree.co/images/IJe_3S-L.png" alt="JavaScript Certificate" loading="lazy" />
+                    <div class="cert-overlay">
+                      <button class="cert-fullscreen" type="button" aria-label="View full certificate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="cert-title">JavaScript</span>
+                </div>
+
+                <!-- Responsive Web Design -->
+                <div class="cert-card" data-cert="RWD" data-link="https://www.freecodecamp.org/certification/kiboma/responsive-web-design-v9">
+                  <div class="cert-image-wrapper">
+                    <img src="https://cdn.imgtree.co/images/6aL9p9VG.png" alt="Responsive Web Design Certificate" loading="lazy" />
+                    <div class="cert-overlay">
+                      <button class="cert-fullscreen" type="button" aria-label="View full certificate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="cert-title">Responsive Web Design</span>
+                </div>
+
+                <!-- Legacy Responsive Web Design -->
+                <div class="cert-card" data-cert="RWD" data-link="https://www.freecodecamp.org/certification/kiboma/responsive-web-design">
+                  <div class="cert-image-wrapper">
+                    <img src="https://cdn.imgtree.co/images/spalY8Ow.png" alt="Legacy Responsive Web Design Certificate" loading="lazy" />
+                    <div class="cert-overlay">
+                      <button class="cert-fullscreen" type="button" aria-label="View full certificate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="cert-title">Legacy Responsive Web Design</span>
+                </div>
+              </div>
+
+              <!-- Saylor University degree card -->
+              <article class="degree-card">
+                <div class="degree-badge">Certified</div>
+                <h3 class="degree-title">CyberSecurity</h3>
+                <div class="degree-meta">
+                  <span class="degree-period">Sep 1, 2025 -- Dec 5, 2026</span>
+                  <div class="degree-score-wrap">
+                    <img src="assets/star-medal.svg" alt="" class="score-icon" />
+                    <span class="degree-score">TBT</span>
+                  </div>
+                </div>
+                <p class="degree-institution">Saylor University</p>
+                <div class="degree-decoration"></div>
+              </article>
+
+              <!-- Saylor certificates row -->
+              <div class="certificates-row">
+                <!-- Cryptography & Neywork Security -->
+                <div class="cert-card" data-cert="Cryptography" data-link="#">
+                  <div class="cert-image-wrapper">
+                    <img cert-image-card loading="lazy" />
+                    <div class="cert-overlay"></div>
+                  </div>
+                  <span class="cert-title">Cryptography & Neywork Security</span>
+                </div>
+
+                <!-- Descrete Structures -->
+                <div class="cert-card" data-cert="Discrete Structures" data-link="#">
+                  <div class="cert-image-wrapper">
+                    <img cert-image-card loading="lazy" />
+                    <div class="cert-overlay"></div>
+                  </div>
+                  <span class="cert-title">Descrete Structures</span>
+                </div>
+
+                <!-- Information Security -->
+                <div class="cert-card" data-cert="Information Security" data-link="#">
+                  <div class="cert-image-wrapper">
+                    <img cert-image-card loading="lazy" />
+                    <div class="cert-overlay"></div>
+                  </div>
+                  <span class="cert-title">Information Security</span>
+                </div>
+
+                <!-- Bitcoin For Developers -->
+                <div class="cert-card" data-cert="Bitcoin For Developers" data-link="#">
+                  <div class="cert-image-wrapper">
+                    <img cert-image-card loading="lazy" />
+                    <div class="cert-overlay"></div>
+                  </div>
+                  <span class="cert-title">Bitcoin For Developers</span>
+                </div>
+
+                <!-- Software Engineering -->
+                <div class="cert-card" data-cert="Software Engineering" data-link="#">
+                  <div class="cert-image-wrapper">
+                    <img cert-image-card loading="lazy" />
+                    <div class="cert-overlay"></div>
+                  </div>
+                  <span class="cert-title">Software Engineering</span>
+                </div>
+
+                <!-- Modern Database Sytems -->
+                <div class="cert-card" data-cert="Modern Database Systems" data-link="#">
+                  <div class="cert-image-wrapper">
+                    <img cert-image-card loading="lazy" />
+                    <div class="cert-overlay"></div>
+                  </div>
+                  <span class="cert-title">Modern Database Sytems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== END EDUCATION SECTION ==================== -->
+
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <section class="content-section projects-section" id="projects" aria-labelledby="projects-title">
+          <div class="work-header">
+            <span class="work-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <img src="assets/work.svg" alt="Work Icon" />
+              </svg>
+            </span>
+            <h2 class="projects-title" id="projects-title">Selected builds</h2>
+          </div>
+          <div class="projects-stage" data-project-stage>
+            <!-- Project 1 -->
+            <article
+              class="project-card"
+              data-project-card
+              data-slot="0"
+              data-project-title="FlashCab Mall"
+              data-project-glyph="FM"
+              data-project-accent="00f88f"
+              data-project-accent-2="19b7ff"
+            >
+              <div class="project-media">
+                <img data-project-image alt="FlashCab Mall preview" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" />
+              </div>
+              <div class="project-copy">
+                <p class="project-kicker">Web App</p>
+                <h3 class="project-title">Calc</h3>
+                <p class="project-description">
+                  Calc is a full-stack scientific calculator with a Flask backend and a canvas-rendered UI. It safely
+                  evaluates expressions using a custom AST parser, supporting trigonometry, fractions, and notation
+                  conversion. The interface features session memory slots, a live clock, and tactile button
+                  states---all built with vanilla JavaScript and Python to demonstrate secure math evaluation and
+                  polished, responsive design in a compact portfolio piece.
+                </p>
+                <div class="project-tags" aria-label="Tech stack tags">
+                  <span>Python 3</span>
+                  <span>Flask</span>
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript (ES6 modules)</span>
+                  <span>Canvas API</span>
+                </div>
+              </div>
+              <div class="project-actions" aria-label="Project links">
+                <a
+                  class="project-action"
+                  href="https://github.com/St-SaintLab/rookieCalc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="FlashCab Mall GitHub repository"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21"
+                    />
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                  </svg>
+                </a>
+                <a
+                  class="project-action"
+                  href="https://rookie-calc-eeu1.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="FlashCab Mall live website"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 14l9-5 9 5-9 5-9-5Z" />
+                    <path d="M12 9v10" />
+                    <path d="M6 16.2 12 19l6-2.8" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+            <!-- Project 2 -->
+            <article
+              class="project-card"
+              data-project-card
+              data-slot="1"
+              data-project-title="NeoPulse Dashboard"
+              data-project-glyph="NP"
+              data-project-accent="7d5cff"
+              data-project-accent-2="00f88f"
+            >
+              <div class="project-media">
+                <img data-project-image alt="NeoPulse Dashboard preview" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" />
+              </div>
+              <div class="project-copy">
+                <p class="project-kicker">Web Game</p>
+                <h3 class="project-title">Dice Arena</h3>
+                <p class="project-description">
+                  Blazor Server casino dice game with 3D canvas dice, three modes, custom dice builder, leaderboard,
+                  and immersive audio.
+                </p>
+                <div class="project-tags" aria-label="Tech stack tags">
+                  <span>.NET 10</span>
+                  <span>C#</span>
+                  <span>Blazor Server</span>
+                  <span>HTML5 Canvas</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>JSON</span>
+                </div>
+              </div>
+              <div class="project-actions" aria-label="Project links">
+                <a
+                  class="project-action"
+                  href="https://github.com/St-SaintLab/rookieDice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="NeoPulse Dashboard GitHub repository"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21"
+                    />
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                  </svg>
+                </a>
+                <a
+                  class="project-action"
+                  href="https://rookiedice.fly.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="NeoPulse Dashboard live website"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 14l9-5 9 5-9 5-9-5Z" />
+                    <path d="M12 9v10" />
+                    <path d="M6 16.2 12 19l6-2.8" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+            <!-- Project 3 -->
+            <article
+              class="project-card"
+              data-project-card
+              data-slot="2"
+              data-project-title="ArcForge Lab"
+              data-project-glyph="AF"
+              data-project-accent="ff9f43"
+              data-project-accent-2="19b7ff"
+            >
+              <div class="project-media">
+                <img data-project-image alt="ArcForge Lab preview" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" />
+              </div>
+              <div class="project-copy">
+                <p class="project-kicker">Website</p>
+                <h3 class="project-title">Novara Estates</h3>
+                <p class="project-description">
+                  Novara Estates is a modern real estate project built to showcase premium properties through a clean,
+                  responsive interface and intuitive user experience. It was designed to present listings professionally
+                  while making property exploration simple, engaging, and visually appealing for potential clients.
+                </p>
+                <div class="project-tags" aria-label="Tech stack tags">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div class="project-actions" aria-label="Project links">
+                <a
+                  class="project-action"
+                  href="https://github.com/St-SaintLab/rookieNovara"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ArcForge Lab GitHub repository"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21"
+                    />
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                  </svg>
+                </a>
+                <a
+                  class="project-action"
+                  href="https://rookie-novara.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ArcForge Lab live website"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 14l9-5 9 5-9 5-9-5Z" />
+                    <path d="M12 9v10" />
+                    <path d="M6 16.2 12 19l6-2.8" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+            <!-- Project 4 -->
+            <article
+              class="project-card"
+              data-project-card
+              data-slot="3"
+              data-project-title="Atlas Portfolio"
+              data-project-glyph="AP"
+              data-project-accent="ff5fa2"
+              data-project-accent-2="00f88f"
+            >
+              <div class="project-media">
+                <img data-project-image alt="Atlas Portfolio preview" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" />
+              </div>
+              <div class="project-copy">
+                <p class="project-kicker">Web Game</p>
+                <h3 class="project-title">Endless Runner</h3>
+                <p class="project-description">
+                  An engaging endless runner web game built with a smooth, responsive interface and dynamic gameplay
+                  mechanics. The project focuses on fast-paced interaction, clean visuals, and an enjoyable user
+                  experience across devices.
+                </p>
+                <div class="project-tags" aria-label="Tech stack tags">
+                  <span>HTML5 Canvas</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div class="project-actions" aria-label="Project links">
+                <a
+                  class="project-action"
+                  href="https://github.com/St-SaintLab/rookieEndlessRunner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Atlas Portfolio GitHub repository"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21"
+                    />
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                  </svg>
+                </a>
+                <a
+                  class="project-action"
+                  href="https://rookie-endless-runner.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Atlas Portfolio live website"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 14l9-5 9 5-9 5-9-5Z" />
+                    <path d="M12 9v10" />
+                    <path d="M6 16.2 12 19l6-2.8" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- ==================== END PROJECTS SECTION ==================== -->
+
+        <!-- ==================== EXPERIENCE SECTION ==================== -->
+        <section class="content-section experience-section" id="experience" aria-labelledby="experience-title">
+          <div class="experience-shell">
+            <div class="section-heading-wrap">
+              <h2 class="section-title experience-title" id="experience-title">My <span>Experience</span></h2>
+            </div>
+            <div class="experience-grid">
+              <article class="experience-card experience-card--frontend" data-pattern="orbit">
+                <span class="experience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <img src="assets/frontend.svg" alt="Work Icon" />
+                  </svg>
+                </span>
+                <div class="experience-copy">
+                  <h3>Frontend Engineer</h3>
+                  <p>
+                    Led the deployment of multiple projects as team leader and developed a real-time auction interface and continuously refining the user experience and currently expanding my skills.
+                  </p>
+                </div>
+              </article>
+              <article class="experience-card experience-card--backend" data-pattern="pulse">
+                <span class="experience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <img src="assets/Backend.svg" alt="Work Icon" />
+                  </svg>
+                </span>
+                <div class="experience-copy">
+                  <h3>Backend Engineer</h3>
+                  <p>Designed and built ISO-secure monolith and microservices systems where trades have been executed.</p>
+                </div>
+              </article>
+              <article class="experience-card experience-card--teammate" data-pattern="drift">
+                <span class="experience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <img src="assets/Teammate.svg" alt="Work Icon" />
+                  </svg>
+                </span>
+                <div class="experience-copy">
+                  <h3>Teammate</h3>
+                  <p>Worked with stakeholders to develop Exchange Systems. Led development team, and deployed projects successfully.</p>
+                </div>
+              </article>
+              <article class="experience-card experience-card--devops" data-pattern="sweep">
+                <span class="experience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <img src="assets/DevOps.svg" alt="Work Icon" />
+                  </svg>
+                </span>
+                <div class="experience-copy">
+                  <h3>Aspiring DevOps</h3>
+                  <p>Maintained multiple systems in production and currently preparing for Red Hat and AWS Solutions Architect certifications.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== JOURNEY REPORT SECTION ==================== -->
+        <section class="content-section journey-section" id="journey-report" aria-labelledby="journey-title">
+          <div class="journey-shell">
+            <div class="journey-copy">
+              <h2 class="journey-title" id="journey-title">My journey report</h2>
+              <p class="journey-description">
+                I've had the opportunity to develop software across a variety of settings --- from small side-jobs to
+                large corporation, mostly building financial systems. Here's my timeline of my journey.
+              </p>
+            </div>
+            <div class="journey-stage" data-journey-stage>
+              <div class="journey-stack">
+                <article
+                  class="report-card report-card--green"
+                  data-report-card
+                  data-year="2024"
+                  data-index="0"
+                  style="--card-fill: #446c2c; --card-fill-2: #395921;"
+                >
+                  <div class="report-card-surface">
+                    <div class="report-card-inner">
+                      <div class="report-card-copy">
+                        <h3 class="report-year">Early 2026</h3>
+                        <p class="report-text">
+                          I focused on building a strong technical foundation by developing basic game development skills
+                          and enrolling in a Certified Cybersecurity course. I also participated in backend project
+                          development and attended hackathons, which helped me gain practical experience, improve my
+                          problem-solving abilities, and strengthen my teamwork in real-world technical environments.
+                        </p>
+                      </div>
+                      <div class="report-media" aria-hidden="true">
+                        <img src="https://cdn.imgtree.co/images/7RgROKbB.jpg" alt="Kali Linux" loading="lazy" />
+                        <img src="https://cdn.imgtree.co/images/WHGDrb3G.jpg" alt="Red Hat" loading="lazy" class="report-media-secondary" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="report-card report-card--green"
+                  data-report-card
+                  data-year="2024"
+                  data-index="0"
+                  style="--card-fill: #446c2c; --card-fill-2: #395921;"
+                >
+                  <div class="report-card-surface">
+                    <div class="report-card-inner">
+                      <div class="report-card-copy">
+                        <h3 class="report-year">Late 2025</h3>
+                        <p class="report-text">
+                          I broadened my knowledge by enrolling in new courses, including C# with Microsoft, to strengthen
+                          my programming foundation. I also participated in building backend projects and explored game
+                          development, gaining practical experience across different areas of software development.
+                        </p>
+                      </div>
+                      <div class="report-media" aria-hidden="true">
+                        <img src="https://cdn.imgtree.co/images/lkomfeTo.jpg" alt="Book1" loading="lazy" />
+                        <img src="https://cdn.imgtree.co/images/4i_kf2Tq.jpg" alt="Book2" loading="lazy" class="report-media-secondary" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="report-card report-card--blue"
+                  data-report-card
+                  data-year="2025"
+                  data-index="1"
+                  style="--card-fill: #2f5e8d; --card-fill-2: #244a72;"
+                >
+                  <div class="report-card-surface">
+                    <div class="report-card-inner">
+                      <div class="report-card-copy">
+                        <h3 class="report-year">Mid 2025</h3>
+                        <p class="report-text">
+                          I focused on expanding my technical foundation by enrolling in courses such as Python, Relational
+                          Databases, and Back-End Development and APIs. At the same time, I deployed backend projects,
+                          gaining practical experience in building and delivering reliable server-side solutions. This
+                          period strengthened both my knowledge and my ability to apply it in real development work.
+                        </p>
+                      </div>
+                      <div class="report-media" aria-hidden="true">
+                        <img src="https://cdn.imgtree.co/images/KIIob7ga.jpg" alt="Python 1" loading="lazy" />
+                        <img src="https://cdn.imgtree.co/images/k0qBOKMx.jpg" alt="Python 2" loading="lazy" class="report-media-secondary" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="report-card report-card--gold"
+                  data-report-card
+                  data-year="2026"
+                  data-index="2"
+                  style="--card-fill: #927300; --card-fill-2: #775d00;"
+                >
+                  <div class="report-card-surface">
+                    <div class="report-card-inner">
+                      <div class="report-card-copy">
+                        <h3 class="report-year"> Early 2025</h3>
+                        <p class="report-text">
+                          I focused on expanding my technical knowledge by enrolling in courses such as Python and Back-End
+                          Development and APIs. Alongside learning, I deployed backend projects, gaining practical
+                          experience in building and launching functional systems. This period strengthened both my
+                          understanding of software development and my ability to apply it in real-world projects. I
+                          focused on expanding my technical skills by enrolling in courses such as JavaScript and
+                          Responsive Web Design, strengthening my understanding of modern front-end development. During the
+                          same period, I also deployed several frontend projects, applying what I learned in real-world
+                          builds and improving my ability to create functional, responsive, and user-friendly interfaces.
+                        </p>
+                      </div>
+                      <div class="report-media" aria-hidden="true">
+                        <img src="https://cdn.imgtree.co/images/J6yIF9xX.jpg" alt="skills-expansion" loading="lazy" />
+                        <img src="https://cdn.imgtree.co/images/S3OrO9cY.jpg" alt="Github" loading="lazy" class="report-media-secondary" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="report-card report-card--gold"
+                  data-report-card
+                  data-year="2026"
+                  data-index="2"
+                  style="--card-fill: #927300; --card-fill-2: #775d00;"
+                >
+                  <div class="report-card-surface">
+                    <div class="report-card-inner">
+                      <div class="report-card-copy">
+                        <h3 class="report-year"> Before 2025</h3>
+                        <p class="report-text">
+                          I had always been passionate about computers and programming, even though I had not yet had the
+                          opportunity to earn formal certification. Most of my foundational knowledge came from self-learning
+                          through YouTube tutorials, where I built a solid understanding of the basics and developed a strong
+                          interest in technology and software development.
+                        </p>
+                      </div>
+                      <div class="report-media" aria-hidden="true">
+                        <img src="https://cdn.imgtree.co/images/M3ddNqmC.jpg" alt="Passion 1" loading="lazy" />
+                        <img src="https://cdn.imgtree.co/images/ANjuPd06.jpg" alt="Passion 2" loading="lazy" class="report-media-secondary" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== FOOTER SECTION ==================== -->
+        <footer class="content-section footer-section" id="footer" aria-labelledby="footer-title">
+          <div class="footer-shell">
+            <div class="footer-grid">
+              <div class="footer-copy">
+                <h2 id="footer-title">Let's <span>Talk</span></h2>
+                <p>What led you here? What are you looking for? I would love to hear from you over a virtual coffee chat!</p>
+              </div>
+              <a class="footer-primary" href="contact.html">
+                <span>Let's get in touch</span>
+                <svg class="footer-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                  <path d="M470.4354553,45.4225006L16.8273029,221.2490387c-18.253809,8.1874695-24.4278889,24.5854034-4.4127407,33.4840851l116.3710175,37.1726685l281.3674316-174.789505c15.3625488-10.9733887,31.0910339-8.0470886,17.5573425,4.023468L186.0532227,341.074646l-7.5913849,93.0762329c7.0313721,14.3716125,19.9055786,14.4378967,28.1172485,7.2952881l66.8582916-63.5891418l114.5050659,86.1867065c26.5942688,15.8265076,41.0652466,5.6130371,46.7870789-23.3935242L509.835083,83.1804428C517.6329956,47.474514,504.3345032,31.7425518,470.4354553,45.4225006z"></path>
+                </svg>
+              </a>
+              <a class="footer-secondary" href="personal.html">Peer through my Personal Life</a>
+              <div class="footer-bottom">
+                <span class="footer-signoff">© Meshack Kiboma @2026</span>
+                <div class="footer-socials" aria-label="Social links">
+                  <a class="footer-social" href="https://www.linkedin.com/in/meshack-kiboma-aa88152a0/" aria-label="LinkedIn">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v2" />
+                      <path d="M2 9h4v12H2z" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </a>
+                  <a class="footer-social" href="https://github.com/St-SaintLab" aria-label="GitHub">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21"
+                      />
+                      <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <!-- ==================== FLOATING TABS CONTAINER ==================== -->
+    <nav class="floating-tabs" id="floatingTabs" aria-label="Secondary navigation" hidden>
+      <a class="floating-tab is-active" href="index.html" data-tab="professional">Professional</a>
+      <a class="floating-tab" href="personal.html" data-tab="personal">Personal</a>
+      <a class="floating-tab" href="contact.html" data-tab="contact">Contact</a>
+    </nav>
+    <!-- CV MODAL (updated) -->
+    <div class="modal-backdrop" id="cv-modal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="cv-title">
+        <div class="modal-head">
+          <div>
+            <h3 id="cv-title">English Curriculum Vitae</h3>
+          </div>
+        </div>
+        <div class="cv-preview" id="cv-preview" tabindex="0"></div>
+        <div class="modal-actions">
+          <!-- New Switch CV dropdown (drop-up) -->
+          <div class="cv-switch-select" data-select>
+            <button class="pill-button modal-btn cv-switch-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span>Switch CV</span>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="dropdown cv-switch-dropdown drop-up" role="listbox" aria-label="Switch CV">
+              <button type="button" class="dropdown-item" data-cv="English CV">English CV</button>
+              <button type="button" class="dropdown-item" data-cv="Swahili CV">Swahili CV</button>
+              <button type="button" class="dropdown-item" data-cv="Spanish CV">Spanish CV</button>
+              <button type="button" class="dropdown-item" data-cv="Japanese CV">Japanese CV</button>
+            </div>
+          </div>
+          <!-- New Download dropdown (drop-up) -->
+          <div class="cv-download-select" data-select>
+            <button class="pill-button modal-btn cv-download-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Full CV</span>
+            </button>
+            <div class="dropdown cv-download-dropdown drop-up" role="listbox" aria-label="Download CV">
+              <button type="button" class="dropdown-item" data-format="word">Word</button>
+              <button type="button" class="dropdown-item" data-format="pdf">PDF</button>
+            </div>
+          </div>
+          <button class="pill-button modal-btn is-ghost" type="button" data-action="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

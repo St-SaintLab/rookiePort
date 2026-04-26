@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;./kiboma&gt; Personal</title>
+  <meta
+    name="description"
+    content="Personal page for the Rookie Portfolio, built to mirror the provided reference slides with a dark neon glassmorphism style."
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="personal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body class="personal-page">
+  <div class="app-shell personal-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html#professional" data-tab-link>
+        &lt;./kiboma&gt;
+        <span class="brand-dot">.</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html" data-tab="professional">Professional</a>
+        <a class="nav-link is-active" href="personal.html" data-tab="personal" aria-current="page">Personal</a>
+        <a class="nav-link" href="contact.html" data-tab="contact">Contact</a>
+
+        <div class="language-select" data-select>
+          <button class="pill-button language-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="pill-ico" aria-hidden="true">🌐</span>
+            <span data-language-label>English</span>
+            <span class="chevron">▾</span>
+          </button>
+
+          <div class="dropdown" role="listbox" aria-label="Language selector">
+            <button type="button" class="dropdown-item is-selected" data-language="English">English</button>
+            <button type="button" class="dropdown-item" data-language="Swahili">Swahili</button>
+            <button type="button" class="dropdown-item" data-language="Spanish">Spanish</button>
+            <button type="button" class="dropdown-item" data-language="Japanese">Japanese</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="personal-main">
+      <!-- A. WRITE A LETTER SECTION -->
+      <section class="personal-section write-letter-section" id="write-letter" aria-labelledby="write-letter-title">
+        <div class="section-intro write-letter-intro">
+          <h1 class="write-letter-title">
+            Hello again?
+            <span class="write-letter-identity">My sobriquet is <strong>Saint</strong></span>
+          </h1>
+          <p class="write-letter-subtitle">
+            Saint is Curious<br />
+          </p>
+
+          <div class="write-letter-actions">
+            <button class="write-letter-button" type="button" data-open-letter>
+              Write a Letter
+            </button>
+
+            <button
+              class="gallery-folder-button"
+              type="button"
+              data-open-gallery-terms
+              title="Click me"
+              aria-label="Open gallery terms"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" />
+                <path d="M3 10h18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- B. HOBBIES SECTION -->
+      <section class="personal-section hobbies-section" id="hobbies" aria-labelledby="hobbies-title">
+        <div class="section-heading centered-heading">
+          <h2 class="hobbies-title"><strong>Saint's</strong> Hobbies</h2>
+          <p>I like to stay active. New hobbies are added almost every year.</p>
+        </div>
+
+        <article class="glass-card hobbies-card" aria-label="Hobbies list">
+          <div class="future-plan-label">Hobbies</div>
+          <ul class="clean-list hobbies-list">
+            <li>Morning Working Out</li>
+            <li>Vibe Coding</li>
+            <li>Hiking</li>
+            <li>Swimming</li>
+            <li>Watching Formula 1</li>
+            <li>Watching Soccer</li>
+            <li>Playing Video Games</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- C. COMPONENTS SECTION -->
+      <section class="personal-section components-section" id="components" aria-labelledby="components-title">
+        <div class="section-heading components-heading">
+          <h2 class="components-title">Components of <strong>Saint's</strong> Life</h2>
+        </div>
+
+        <div class="components-grid" aria-label="Components cards">
+          <button
+            class="component-card component-card--work"
+            type="button"
+            data-component-card
+            data-component-index="0"
+          >
+            <span class="component-card-meta">Computer & IT</span>
+          </button>
+
+          <button
+            class="component-card component-card--fitness"
+            type="button"
+            data-component-card
+            data-component-index="1"
+          >
+            <span class="component-card-meta">Fitness</span>
+          </button>
+
+          <button
+            class="component-card component-card--languages"
+            type="button"
+            data-component-card
+            data-component-index="2"
+          >
+            <span class="component-card-meta">Foreign Languages</span>
+          </button>
+          <button
+            class="component-card component-card--gaming"
+            type="button"
+            data-component-card
+            data-component-index="3"
+          >
+            <span class="component-card-meta">Gaming</span>
+          </button>
+
+          <button
+            class="component-card component-card--f1"
+            type="button"
+            data-component-card
+            data-component-index="4"
+          >
+            <span class="component-card-meta">Formula 1</span>
+          </button>
+          <button
+            class="component-card component-card--family-friends"
+            type="button"
+            data-component-card
+            data-component-index="5"
+          >
+            <span class="component-card-meta">Family & Friends</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- D. PROFILE SECTION -->
+      <section class="personal-section profile-section" id="profile" aria-labelledby="profile-title">
+        <div class="section-heading profile-heading">
+          <h2 id="profile-title">Profile</h2>
+        </div>
+
+        <div class="profile-grid">
+          <article class="profile-card future-card" aria-labelledby="future-title">
+            <div class="profile-card-head">
+              <h3 id="future-title">Future plan</h3>
+              <span class="card-count">10</span>
+            </div>
+
+            <ul class="plan-list">
+              <li class="done"><span>Enroll in CyberSecurity.</span></li>
+              <li>Master Python.</li>
+              <li>Master C#.</li>
+              <li>Expand knowledge on C ++.</li>
+              <li>Deploy 10+ more projects.</li>
+              <li>Seek a job.</li>
+              <li>Climb Mt. Longonot.</li>
+              <li>Visit Shella Beach.</li>
+              <li>Visit Nairobi Snake Park.</li>
+              <li class="done">Climb Ngong Hills.</li>
+              <li class="done">Climb Kijabe Hills.</li>
+              <li>Visit Manda Beach</li>
+              <li>Visit Kiwayu Island to see archipelago </li>
+              <li>Visit Diamonds Malindi</li>
+              <li>Participate in 25+ hackathon Events</li>
+              <li>Be Happy</li>
+            </ul>
+          </article>
+          <article class="profile-card routine-card" aria-labelledby="routine-title">
+            <div class="profile-card-head">
+              <h3 id="routine-title">Daily routine</h3>
+              <span class="card-icon" aria-hidden="true">⏰</span>
+            </div>
+
+            <div class="routine-list">
+              <div class="routine-row"><strong>6:00 AM</strong><span>Wake up</span></div>
+              <div class="routine-row"><strong>8:00 AM</strong><span>School/Work</span></div>
+              <div class="routine-row"><strong>5:00 PM</strong><span>Gym</span></div>
+              <div class="routine-row"><strong>6:00 PM</strong><span>Code</span></div>
+              <div class="routine-row"><strong>12:00 PM</strong><span>Music &amp; Anime</span></div>
+              <div class="routine-row"><strong>13:00 PM</strong><span>Sleep</span></div>
+            </div>
+          </article>
+
+          <article class="profile-card music-card" aria-labelledby="music-title">
+            <div>
+              <h3 class="music-title">Current Music Loop</h3>
+              <span class="music-icon" aria-hidden="true"><i class="fab fa-spotify" style="color:#0da13e9c;"></i></span>
+            </div>
+
+            <div class="music-embed">
+              <iframe
+                data-testid="embed-iframe"
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/6jx0JZB3f0Cc2jjdldYaDb?utm_source=generator&theme=0"
+                width="30%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+              </iframe>
+            </div>
+          </article>
+
+          <article class="profile-stats" aria-label="Personal stats">
+            <div class="stat-chip stat-chip--blue"><span>Coding Hrs</span><strong>+1920</strong></div>
+            <div class="stat-chip stat-chip--purple"><span>Animes watched</span><strong>+300</strong></div>
+            <div class="stat-chip stat-chip--red"><span>Movies watched</span><strong>+200</strong></div>
+            <div class="stat-chip stat-chip--green"><span>Music Genre</span><strong>+10</strong></div>
+            <div class="stat-chip stat-chip--gold"><span>Games played</span><strong>+7</strong></div>
+            <div class="stat-chip stat-chip--teal"><span>Projects Built</span><strong>+19</strong></div>
+            <div class="stat-chip stat-chip--orange"><span>Hackathons Joined</span><strong>+25</strong></div>
+            <div class="stat-chip stat-chip--pink"><span>Certificates Earned</span><strong>+7</strong></div>
+            <div class="stat-chip stat-chip--cyan"><span>Books Read</span><strong>+24</strong></div>
+            <div class="stat-chip stat-chip--lime"><span>Challenges Completed</span><strong>+42</strong></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- E. FOOTER SECTION -->
+      <footer class="personal-footer" id="footer" aria-labelledby="footer-title">
+        <div class="footer-shell">
+            <h2 class="footer-title">For visiting my profile<br /><span>Thank you.</span></h2>
+        </div>
+            <div class="footer-bottom-row">
+              <span class="footer-signoff">© Meshack Kiboma @2026</span>
+
+              <div class="footer-socials" aria-label="Social links">
+                <a class="footer-social" href="https://wa.me/+254741491775" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20.5 11.9A8.5 8.5 0 0 1 8.5 19l-4 1 1.1-3.7A8.5 8.5 0 1 1 20.5 11.9Z" />
+                    <path d="M9 8.7c.2-.5.5-.6.9-.6h.7c.2 0 .4.2.5.5l.7 1.7c.1.3 0 .5-.2.7l-.5.6c-.2.2-.2.5 0 .8.4.7 1.1 1.7 2.3 2.5.3.2.6.2.8 0l.7-.6c.2-.2.4-.2.7-.1l1.8.6c.3.1.5.3.5.6v.7c0 .4-.2.7-.6.9-.6.3-1.4.5-2 .4-2.1-.2-4.2-1.2-5.7-2.7S7 12.1 6.8 10c-.1-.6.1-1.4.4-2Z" />
+                  </svg>
+                </a>
+
+                <a class="footer-social" href="https://www.instagram.com/st.saint._" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" />
+                  </svg>
+                </a>
+
+                <a class="footer-social" href="https://www.linkedin.com/in/meshack-kiboma-aa88152a0/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v2" />
+                    <path d="M2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+
+                <a class="footer-social" href="https://github.com/St-SaintLab" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2m12 4v-3.4c0-1 .3-1.7-.4-2.4 2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12.2 12.2 0 0 0-6.4 0C6.7 2.2 5.6 2.5 5.6 2.5a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4.2 9c0 4.8 3 5.9 5.8 6.2-.5.5-.4 1.2-.3 2.1V21" />
+                    <path d="M9 19c-4.5 1.5-4.5-1.5-6-2" />
+                  </svg>
+                </a>
+
+                <a class="footer-social" href="https://open.spotify.com/user/31xqp377gtxxt75qymlfy3b2n7qa?si=ae71d567ade2404b" aria-label="Spotify" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M7.8 10.1c2.9-1 6.4-.8 8.9.5" />
+                    <path d="M8.5 13c2.4-.7 5.4-.5 7.4.4" />
+                    <path d="M9.2 15.4c1.7-.4 3.8-.2 5.1.3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Existing floating tab system mirrored from the current project -->
+  <nav class="floating-tabs" id="floatingTabs" aria-label="Secondary navigation" hidden>
+    <a class="floating-tab" href="index.html" data-tab="professional">Professional</a>
+    <a class="floating-tab is-active" href="personal.html" data-tab="personal" aria-current="page">Personal</a>
+    <a class="floating-tab" href="contact.html" data-tab="contact">Contact</a>
+  </nav>
+
+  <!-- Letter modal -->
+  <div class="modal-backdrop personal-modal" id="letter-modal" aria-hidden="true">
+    <div class="modal-panel personal-modal-panel letter-modal-panel" role="dialog" aria-modal="true" aria-labelledby="letter-modal-title">
+      <div class="modal-head personal-modal-head">
+        <div>
+          <p class="modal-kicker">Write a letter to Saint!</p>
+        </div>
+
+
+      </div>
+
+
+      <form class="letter-form" id="letterForm">
+        <label class="sr-only" for="letterMessage">Your message</label>
+        <textarea
+          id="letterMessage"
+          name="message"
+          rows="4"
+          placeholder="Say hi, ask stuff, or overshare 👀. Only Saint can see this"
+          required
+        ></textarea>
+
+        <div class="modal-actions letter-actions">
+          <button class="pill-button modal-btn is-ghost" type="button" data-letter-cancel>Cancel</button>
+          <button class="pill-button modal-btn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Components modal -->
+  <div class="modal-backdrop personal-modal" id="component-modal" aria-hidden="true">
+    <div class="modal-panel personal-modal-panel component-modal-panel" role="dialog" aria-modal="true" aria-labelledby="component-modal-title">
+      <div class="modal-head personal-modal-head">
+        <div>
+          <h3 id="component-modal-title">Interest, Work</h3>
+        </div>
+
+        <button class="modal-close" type="button" data-component-close aria-label="Close components popup">×</button>
+      </div>
+
+      <div class="component-modal-body">
+        <div class="component-preview" aria-hidden="true"></div>
+
+        <div class="component-copy">
+          <p class="component-summary" data-component-summary></p>
+          <ul class="component-details" data-component-details></ul>
+        </div>
+      </div>
+
+      <div class="component-modal-footer">
+        <div class="component-arrows" aria-label="Navigate components">
+          <button class="nav-circle nav-circle--small" type="button" data-component-prev aria-label="Previous component">←</button>
+          <button class="nav-circle nav-circle--small" type="button" data-component-next aria-label="Next component">→</button>
+        </div>
+
+        <div class="component-counter" data-component-counter>1 / 6</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery terms modal -->
+
+  <div class="modal-backdrop personal-modal gallery-terms-modal" id="gallery-terms-modal" aria-hidden="true">
+    <div class="modal-panel personal-modal-panel gallery-terms-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-terms-title">
+      <div class="modal-head personal-modal-head gallery-terms-head">
+        <div>
+          <p class="modal-kicker">Gallery Terms & Conditions</p>
+        </div>
+      </div>
+
+      <div class="gallery-terms-copy">
+        <p class="gallery-terms-text">
+          By accessing the gallery, you agree to view these personal images respectfully. They are not to be shared without permission.
+        </p>
+
+        <label class="gallery-terms-check">
+          <input type="checkbox" data-gallery-agree />
+          <span>I agree to the terms.</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery container -->
+
+  <div class="modal-backdrop personal-modal gallery-modal" id="gallery-modal" aria-hidden="true">
+    <div class="modal-panel personal-modal-panel gallery-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+      <div class="gallery-panel-head">
+        <div>
+          <h3 id="gallery-title">Gallery</h3>
+        </div>
+      </div>
+
+      <div class="gallery-cards" data-gallery-cards>
+        <button class="gallery-card" type="button" data-gallery-card data-gallery-key="saint">
+          <span class="gallery-card-title">Saint</span>
+          <span class="gallery-card-image">
+            <img src="https://cdn.imgtree.co/images/VUv_pamQ.jpg" alt="Saint cover image" loading="lazy" />
+          </span>
+        </button>
+
+        <button class="gallery-card" type="button" data-gallery-card data-gallery-key="west-coast">
+          <span class="gallery-card-title">West Coast</span>
+          <span class="gallery-card-image">
+            <img src="https://cdn.imgtree.co/images/RM4Dl5Ny.jpg" alt="West Coast cover image" loading="lazy" />
+          </span>
+        </button>
+
+        <button class="gallery-card" type="button" data-gallery-card data-gallery-key="blackbird">
+          <span class="gallery-card-title">Galerie</span>
+          <span class="gallery-card-image">
+            <img src="https://cdn.imgtree.co/images/vCrZ6fDW.jpg" alt="BlackBird cover image" loading="lazy" />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery images container -->
+
+  <div class="modal-backdrop personal-modal gallery-images-modal" id="gallery-images-modal" aria-hidden="true">
+    <div class="modal-panel personal-modal-panel gallery-images-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-images-title">
+      <div class="gallery-images-head">
+        <div>
+          <h3 id="gallery-images-title">Images</h3>
+        </div>
+
+        <button class="modal-close gallery-images-close" type="button" data-gallery-images-close aria-label="Close gallery images popup">×</button>
+      </div>
+
+      <div class="gallery-images-grid" data-gallery-images-grid></div>
+    </div>
+  </div>
+
+  <script src="personal.js"></script>
+</body>
+</html>
