@@ -1625,7 +1625,7 @@ body.modal-open {
   color: rgba(245, 247, 255, 0.88);
   font-size: 13px;
   line-height: 1.4;
-  max-width: 32ch;
+  max-width: 62ch;
 }
 
 @keyframes experience-border-spin {
