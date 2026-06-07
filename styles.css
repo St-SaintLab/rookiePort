@@ -199,6 +199,7 @@ body {
   min-width: 46px;
   padding: 0;
   height: 42px;
+  margin-top: 30px;
   background: rgba(14, 15, 29, 0.9);
   color: var(--text);
   border-color: rgba(0, 248, 143, 0.26);
