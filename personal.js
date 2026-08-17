@@ -158,7 +158,7 @@ const translations = {
       label: 'Hobbies',
       items: [
         'Morning Working Out',
-        'Vibe Coding',
+        'Programming',
         'Hiking',
         'Swimming',
         'Watching Formula 1',
