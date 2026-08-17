@@ -83,7 +83,7 @@ const cvContent = {
     title: 'English Curriculum Vitae',
     body: `
       <h4>Meshack Kiboma</h4>
-      <p>| Full-Stack Developer | Jr Software Engineer | Game Dev | Cryptographer |</p>
+      <p>| Full-Stack Developer | Jr Software Engineer |</p>
       <ul>
         <li>Experience: 2+ years</li>
         <li>Projects worked on: 19+</li>
@@ -101,7 +101,7 @@ const cvContent = {
     title: 'Swahili Curriculum Vitae',
     body: `
       <h4>Meshack Kiboma</h4>
-      <p>| Msanidi wa Full-Stack | Mhandisi Mdogo wa Programu | Utengenezaji wa Michezo za video | Mtaalamu wa Usimbaji |</p>
+      <p>| Msanidi wa Full-Stack | Mhandisi Mdogo wa Programu |</p>
       <ul>
         <li>Uzoefu: Zaidi ya miaka 2</li>
         <li>Miradi iliyofanyiwa kazi: Zaidi ya 19</li>
@@ -119,7 +119,7 @@ const cvContent = {
     title: 'Spanish Curriculum Vitae',
     body: `
       <h4>Meshack Kiboma</h4>
-      <p>| Desarrollador Full-Stack | Ingeniero de Software Junior | Desarrollo de Videojuegos | Criptógrafo |</p>
+      <p>| Desarrollador Full-Stack | Ingeniero de Software Junior |</p>
       <ul>
         <li>Experiencia: más de 2 años</li>
         <li>Proyectos en los que ha trabajado: más de 19</li>
@@ -137,7 +137,7 @@ const cvContent = {
     title: 'Japanese Curriculum Vitae',
     body: `
       <h4>Meshack Kiboma</h4>
-      <p>| フルスタック開発者 | ジュニアソフトウェアエンジニア | ゲーム開発者 | 暗号技術 |</p>
+      <p>| フルスタック開発者 | ジュニアソフトウェアエンジニア |</p>
       <ul>
         <li>経験: 2年以上</li>
         <li>関わったプロジェクト: 19件以上</li>
@@ -183,28 +183,28 @@ const LANGUAGE_CODES = {
 const translations = {
   English: {
     documentTitle: '</.kiboma> Portfolio',
-    heroSummary: '| Full-Stack Developer | Jr Software Engineer | Game Dev | Cryptographer |',
+    heroSummary: '| Full-Stack Developer | Jr Software Engineer |',
     heroParagraph:
       'I bring a detail-oriented mindset and a strong passion for building purposeful digital solutions. With a primary focus on backend development, I specialize in creating robust, efficient, and scalable systems that turn ideas into reality. Alongside my software engineering journey, I also bring foundational game development skills and a growing interest in designing interactive experiences that are both functional and memorable.',
     heroCta: 'View CV',
   },
   Swahili: {
     documentTitle: '</.kiboma> Portfolio',
-    heroSummary: '| Msanidi wa Full-Stack | Mhandisi Mdogo wa Programu | Utengenezaji wa Michezo za video | Mtaalamu wa Usimbaji |',
+    heroSummary: '| Msanidi wa Full-Stack | Mhandisi Mdogo wa Programu ',
     heroParagraph:
       'Ninaleta mtazamo wa umakini kwa maelezo na shauku kubwa ya kujenga suluhisho za kidijitali zenye maana. Kwa kuzingatia zaidi maendeleo ya backend, ninajikita katika kuunda mifumo imara, yenye ufanisi, na inayopanuka kirahisi ambayo hubadilisha mawazo kuwa ukweli. Sambamba na safari yangu ya uhandisi wa programu, pia nina ujuzi wa msingi wa game development na hamu inayokua ya kubuni uzoefu wa mwingiliano unaofanya kazi vizuri na kukumbukwa.',
     heroCta: 'Tazama CV',
   },
   Spanish: {
     documentTitle: '</.kiboma> Portfolio',
-    heroSummary: '| Desarrollador Full-Stack | Ingeniero de Software Junior | Desarrollo de Videojuegos | Criptógrafo |',
+    heroSummary: '| Desarrollador Full-Stack | Ingeniero de Software Junior |',
     heroParagraph:
       'Aporto una mentalidad orientada al detalle y una fuerte pasión por construir soluciones digitales con propósito. Con un enfoque principal en el desarrollo backend, me especializo en crear sistemas robustos, eficientes y escalables que convierten ideas en realidad. Además de mi trayectoria en ingeniería de software, también cuento con habilidades básicas en desarrollo de videojuegos y un interés creciente en diseñar experiencias interactivas funcionales y memorables.',
     heroCta: 'Ver CV',
   },
   Japanese: {
     documentTitle: '</.kiboma> Portfolio',
-    heroSummary: '| フルスタック開発者 | ジュニアソフトウェアエンジニア | ゲーム開発者 | 暗号技術 |',
+    heroSummary: '| フルスタック開発者 | ジュニアソフトウェアエンジニア |',
     heroParagraph:
       '私は細部にこだわる姿勢と、目的のあるデジタルソリューションを構築する強い情熱を持っています。特にバックエンド開発に重点を置き、アイデアを現実に変える堅牢で効率的、かつ拡張性の高いシステムを作ることを得意としています。ソフトウェアエンジニアとしての学びに加えて、ゲーム開発の基礎スキルも持ち、機能的で記憶に残るインタラクティブな体験を設計することにも関心を深めています。',
     heroCta: 'CVを見る',
