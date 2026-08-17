@@ -38,7 +38,7 @@ const translations = {
     copyAriaLabel: 'Copy email address',
 
     currentPositionTitle: 'Current<br />Position',
-    currentPositionBody: 'Jr Software Engineer Backend Development<br /><br />UoN Student@BEc, KE.',
+    currentPositionBody: 'Full-Stack Developer<br /><br />UoN Student@BEc, KE.',
     experienceTitle: 'Experience',
     experienceBody: '2+ years',
     fromTitle: 'From',
